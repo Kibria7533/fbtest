@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express();
 require('dotenv').config();
+
 if (process.env.NODE_ENV === "production") {
     app.use(express.static("client/build"));
     app.get('/*', function (req, res) {
